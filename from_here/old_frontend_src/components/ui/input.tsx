@@ -8,7 +8,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, label, error, helperText, id, ...props }, ref) => {
-    const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
+    const reactId = React.useId();
+    const inputId = id || `input-${reactId}`;
     
     // Base classes for input styling
     const baseClasses = "block w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 bg-white text-gray-900 placeholder-gray-500 disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200";

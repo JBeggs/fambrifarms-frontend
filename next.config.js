@@ -1,11 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'fambrifarms.co.za', pathname: '/**' },
+      { protocol: 'http', hostname: 'fambrifarms.co.za', pathname: '/**' },
+      { protocol: 'https', hostname: 'www.fambrifarms.co.za', pathname: '/**' },
+      { protocol: 'http', hostname: 'www.fambrifarms.co.za', pathname: '/**' },
+    ],
+  },
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:8000/api/:path*',
+        destination: 'https://famdridevops.pythonanywhere.com/api/:path*',
       },
     ];
   },

@@ -1,9 +1,10 @@
 import { 
   User, Product, Department, Wishlist, Order, AuthTokens, LoginRequest, RegisterRequest,
-  CompanyInfo, PageContent, BusinessHours, TeamMember, FAQ, Testimonial 
+  CompanyInfo, PageContent, BusinessHours, TeamMember, FAQ, Testimonial,
+  Supplier, SupplierProduct, UnitOfMeasure, FinishedInventory, StockMovement, StockAlert
 } from '../types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://famdridevops.pythonanywhere.com/api';
 
 interface ApiResponse<T> {
   count: number;
@@ -129,7 +130,7 @@ class ApiClient {
       throw new Error('No refresh token available');
     }
 
-    const response = await fetch(`${this.baseURL}/auth/refresh/`, {
+    const response = await fetch(`${this.baseURL}/auth/token/refresh/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -190,11 +191,11 @@ class ApiClient {
   }
 
   async getProducts(): Promise<ApiResponse<Product>> {
-    return this.request<ApiResponse<Product>>('/products/products/');
+    return this.request<ApiResponse<Product>>('/products/');
   }
 
   async getProduct(id: number): Promise<Product> {
-    return this.request<Product>(`/products/products/${id}/`);
+    return this.request<Product>(`/products/${id}/`);
   }
 
   async getWishlist(): Promise<Wishlist> {
@@ -223,13 +224,9 @@ class ApiClient {
   }
 
   async convertToOrder(): Promise<{ order_number: string }> {
-    return this.request<{ order_number: string }>('/wishlist/convert/', {
+    return this.request<{ order_number: string }>('/wishlist/convert-to-order/', {
       method: 'POST',
     });
-  }
-
-  async checkOrderDay(): Promise<{ is_order_day: boolean }> {
-    return this.request<{ is_order_day: boolean }>('/wishlist/check-order-day/');
   }
 
   async getOrders(): Promise<ApiResponse<Order>> {
@@ -241,7 +238,7 @@ class ApiClient {
   }
 
   async updateOrderStatus(orderId: number, status: string): Promise<Order> {
-    return this.request<Order>(`/orders/${orderId}/update-status/`, {
+    return this.request<Order>(`/orders/${orderId}/status/`, {
       method: 'PATCH',
       body: JSON.stringify({ status }),
     });
@@ -249,7 +246,7 @@ class ApiClient {
 
   // CMS Methods
   async getCompanyInfo(): Promise<any> {
-    return this.request('/products/company/');
+    return this.request('/products/company-info/');
   }
 
   async getPageContent(page: string): Promise<any> {
@@ -274,6 +271,70 @@ class ApiClient {
 
   async getFeaturedTestimonials(): Promise<any> {
     return this.request('/products/testimonials/?is_featured=true');
+  }
+
+  // Supplier Management Methods
+  async getSuppliers(): Promise<ApiResponse<Supplier>> {
+    return this.request<ApiResponse<Supplier>>('/suppliers/suppliers/');
+  }
+
+  async getSupplier(id: number): Promise<Supplier> {
+    return this.request<Supplier>(`/suppliers/suppliers/${id}/`);
+  }
+
+  async getSupplierProducts(): Promise<ApiResponse<SupplierProduct>> {
+    return this.request<ApiResponse<SupplierProduct>>('/suppliers/supplier-products/');
+  }
+
+  async getSupplierSummary(): Promise<any> {
+    return this.request('/suppliers/summary/');
+  }
+
+  async getBestPrices(): Promise<any> {
+    return this.request('/suppliers/best-prices/');
+  }
+
+  // Inventory Management Methods
+  async getUnitsOfMeasure(): Promise<ApiResponse<UnitOfMeasure>> {
+    return this.request<ApiResponse<UnitOfMeasure>>('/inventory/units/');
+  }
+
+  async getFinishedInventory(): Promise<ApiResponse<FinishedInventory>> {
+    return this.request<ApiResponse<FinishedInventory>>('/inventory/finished-inventory/');
+  }
+
+  async getInventoryItem(productId: number): Promise<FinishedInventory> {
+    return this.request<FinishedInventory>(`/inventory/finished-inventory/${productId}/`);
+  }
+
+  async getStockMovements(): Promise<ApiResponse<StockMovement>> {
+    return this.request<ApiResponse<StockMovement>>('/inventory/stock-movements/');
+  }
+
+  async getProductStockMovements(productId: number): Promise<ApiResponse<StockMovement>> {
+    return this.request<ApiResponse<StockMovement>>(`/inventory/stock-movements/?product=${productId}`);
+  }
+
+  async getStockAlerts(): Promise<ApiResponse<StockAlert>> {
+    return this.request<ApiResponse<StockAlert>>('/inventory/alerts/');
+  }
+
+  async resolveStockAlert(alertId: number): Promise<StockAlert> {
+    return this.request<StockAlert>(`/inventory/alerts/${alertId}/acknowledge/`, {
+      method: 'POST',
+    });
+  }
+
+  async getInventorySummary(): Promise<any> {
+    return this.request('/inventory/finished-inventory/summary/');
+  }
+
+  async getLowStockProducts(): Promise<any> {
+    return this.request('/inventory/finished-inventory/low_stock/');
+  }
+
+  async getStockLevels(): Promise<any> {
+    return this.request('/inventory/stock-levels/');
   }
 }
 

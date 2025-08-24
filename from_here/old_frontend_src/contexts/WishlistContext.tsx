@@ -45,15 +45,10 @@ export const WishlistProvider = ({ children }: { children: React.ReactNode }) =>
   };
 
   const checkOrderDay = async () => {
-    if (!isAuthenticated) {
-      return;
-    }
-    try {
-      const data = await apiClient.checkOrderDay();
-      setIsOrderDay(data.is_order_day);
-    } catch (error) {
-      console.error('Failed to check order day:', error);
-    }
+    // Local rule: Orders can be placed on Tuesdays (2) and Fridays (5)
+    const today = new Date();
+    const dayOfWeek = today.getDay();
+    setIsOrderDay(dayOfWeek === 2 || dayOfWeek === 5);
   };
 
   const addToWishlist = async (productId: number, quantity: number, notes?: string) => {
