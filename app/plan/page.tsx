@@ -21,9 +21,9 @@ export default function DevelopmentPlanPage() {
               </div>
             </div>
             <ul className="space-y-2 text-sm text-green-700">
-              <li>• New landing and WOW pages (mobile-first)</li>
-              <li>• Procurement backend (POs create/update/receive)</li>
+              <li>• Django procurement backend (POs create/update/receive)</li>
               <li>• Auto supplier assignment</li>
+              <li>• Deploy Django backend to PythonAnywhere</li>
               <li>• Core documentation (one-pager, glossary, sitemap)</li>
             </ul>
           </div>

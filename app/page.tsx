@@ -123,7 +123,7 @@ export default function LandingPage() {
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <div className="text-green-600 font-bold text-lg mb-2">Phase 1 - Week 1</div>
               <h3 className="font-semibold text-gray-900 mb-2">Foundation</h3>
-              <p className="text-sm text-gray-600">Procurement backend, mobile landing pages, core documentation</p>
+              <p className="text-sm text-gray-600">Django procurement backend functionality, deploy to PythonAnywhere, core API endpoints, documentation</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <div className="text-blue-600 font-bold text-lg mb-2">Phase 2 - Week 2</div>

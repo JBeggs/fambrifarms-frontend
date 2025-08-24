@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">Development</h3>
             <p className="text-gray-600">
-              Phase 1: Procurement & docs<br/>
+              Phase 1: Django procurement backend + deploy to PythonAnywhere<br/>
               Phase 2: Production & admin<br/>
               Phase 3: Restaurant UX polish
             </p>
