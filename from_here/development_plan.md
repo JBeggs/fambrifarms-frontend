@@ -4,9 +4,9 @@
 - App, models (SupplierPurchaseOrder, SupplierPOItem), endpoints to generate POs, update, receive
 - Backend auto-assign supplier/internal on order creation
 
-2) Production Reservations (next)
-- Create ProductionReservation per internal-fulfillment line
-- Fulfill on batch completion; expose ETAs in UI
+2) Production Reservations (started)
+- Model + endpoints added: /api/production/reservations/
+- Create per internal-fulfillment line; expose ETAs in UI
 
 3) Admin Endpoints
 - /api/admin/users (list/create/update/reset password)

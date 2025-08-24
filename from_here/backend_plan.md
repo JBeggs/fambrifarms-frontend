@@ -11,7 +11,8 @@
   - Auto-supplier assignment improvements (lead time, preferred supplier, price caps)
 
 - Production
-  - ProductionReservation model; schedule and fulfill; update finished inventory
+  - ProductionReservation model and API at /api/production/reservations/ (auth)
+  - Schedule and fulfill; update finished inventory
   - Expose batches and reservations for reporting
 
 - Inventory & Alerts
