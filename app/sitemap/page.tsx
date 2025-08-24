@@ -14,7 +14,7 @@ export default function SitemapPage() {
           <div className="bg-green-50 rounded-lg p-6 border border-green-200">
             <h2 className="text-xl font-semibold text-green-800 mb-3">Current App (This Documentation)</h2>
             <div className="space-y-2 text-sm text-green-700">
-              <div>• Landing page with development overview</div>
+              <div>• Development overview</div>
               <div>• System overview and user roles</div>
               <div>• Glossary and development plan</div>
               <div>• Reporting strategy</div>
@@ -41,7 +41,7 @@ export default function SitemapPage() {
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Public Routes (No Authentication)</h2>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900">Authentication & Landing</h3>
+            <h3 className="text-lg font-semibold text-gray-900">Authentication</h3>
           </div>
           <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

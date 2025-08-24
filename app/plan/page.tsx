@@ -24,6 +24,7 @@ export default function DevelopmentPlanPage() {
               <li>• Django procurement backend (POs create/update/receive)</li>
               <li>• Auto supplier assignment</li>
               <li>• Deploy Django backend to PythonAnywhere</li>
+              <li>• Admin models and URL routing configured</li>
               <li>• Core documentation (one-pager, glossary, sitemap)</li>
             </ul>
           </div>
@@ -87,7 +88,7 @@ export default function DevelopmentPlanPage() {
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <h4 className="font-semibold text-gray-900 mb-3">Frontend - Documentation App</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>✅ Mobile-first landing page</li>
+                <li>✅ Mobile-first documentation pages</li>
                 <li>✅ System overview and roles pages</li>
                 <li>✅ Glossary with plain language terms</li>
                 <li>✅ Development plan documentation</li>
@@ -116,10 +117,10 @@ export default function DevelopmentPlanPage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-3">Admin Endpoints</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">Admin Endpoints (continuation)</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• /api/admin/users (list/create/update/reset)</li>
-                <li>• /api/admin/restaurants (create/assign/remove users)</li>
+                <li>• Extend /api/admin/users (list/create/update/reset)</li>
+                <li>• Extend /api/admin/restaurants (create/assign/remove users)</li>
                 <li>• User management UI screens</li>
                 <li>• Password reset functionality</li>
                 <li>• Role assignment interface</li>
