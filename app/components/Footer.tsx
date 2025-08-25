@@ -24,7 +24,7 @@ export default function Footer() {
                 Phone: <a href="tel:0725235515" className="text-green-700 hover:underline">072 523 5515</a>
               </p>
               <p>
-                Email: <a href="mailto:dev@famdrifarms.co.za" className="text-green-700 hover:underline">dev@famdrifarms.co.za</a>
+                Email: <a href="mailto:dev@fambrifarms.co.za" className="text-green-700 hover:underline">dev@fambrifarms.co.za</a>
               </p>
               <p>
                 WhatsApp: <a href="https://wa.me/27725235515" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">Chat with us</a>
