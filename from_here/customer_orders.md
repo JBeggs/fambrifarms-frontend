@@ -4,7 +4,7 @@
 - Browse products and add what you want with quantities
 - You can change quantities or remove items anytime
 
-2) Place the order (Tuesdays/Fridays)
+2) Place the order (Mondays/Thursdays)
 - On those days, press “Place Order” from your wishlist
 - The system will decide supplier vs. in-house for each item
 

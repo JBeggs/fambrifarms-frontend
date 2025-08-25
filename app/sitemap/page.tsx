@@ -85,7 +85,7 @@ export default function SitemapPage() {
                 <div>
                   <h4 className="font-medium text-gray-900 mb-3">Key Elements:</h4>
                   <div className="space-y-2 text-sm text-gray-600">
-                    <div>• CTA to order on Tue/Fri (prominent button)</div>
+                    <div>• CTA to order on Mon/Thu (prominent button)</div>
                     <div>• Current wishlist item count</div>
                     <div>• Recent orders with status</div>
                     <div>• Next delivery date</div>
@@ -95,7 +95,7 @@ export default function SitemapPage() {
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-medium text-gray-900 mb-2">Mobile Layout:</h4>
                   <div className="text-sm text-gray-600 space-y-1">
-                    <div>• Large "Order Now" button (if Tue/Fri)</div>
+                    <div>• Large "Order Now" button (if Mon/Thu)</div>
                     <div>• Card-based layout for quick actions</div>
                     <div>• Swipe-friendly order history</div>
                   </div>

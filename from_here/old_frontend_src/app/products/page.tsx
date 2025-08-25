@@ -266,7 +266,7 @@ export default function ProductsPage() {
                     Ready to Start Ordering?
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Create an account to add products to your wishlist and place orders on Tuesdays and Fridays
+                    Create an account to add products to your wishlist and place orders on Mondays and Thursdays
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
@@ -294,7 +294,7 @@ export default function ProductsPage() {
                     Great selection, {user?.first_name}! 🛒
                   </h3>
                   <p className="text-green-700 mb-6">
-                    Add products to your wishlist and place orders on Tuesdays and Fridays
+                    Add products to your wishlist and place orders on Mondays and Thursdays
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a

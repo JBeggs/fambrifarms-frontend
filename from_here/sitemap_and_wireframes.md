@@ -5,7 +5,7 @@ Public
 - `/register` (restaurant registration form)
 
 Restaurant (authenticated, user_type='restaurant')
-- `/dashboard` (CTA to order on Tue/Fri, wishlist count, recent orders)
+- `/dashboard` (CTA to order on Mon/Thu, wishlist count, recent orders)
 - `/products` (browse/search)
 - `/wishlist` (items, quantities, remove)
 - `/orders` (list)

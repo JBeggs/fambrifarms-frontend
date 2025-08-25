@@ -121,7 +121,7 @@ export default function ContactPage() {
                 <div className="mt-6 p-4 bg-green-50 rounded-lg">
                   <h3 className="font-semibold text-green-800 mb-2">📦 Order Days</h3>
                   <p className="text-sm text-green-700">
-                    We accept orders on <strong>Tuesdays</strong> and <strong>Fridays</strong> only. 
+                    We accept orders on <strong>Mondays</strong> and <strong>Thursdays</strong> only. 
                     Orders placed on these days will be processed and delivered within 24-48 hours.
                   </p>
                 </div>

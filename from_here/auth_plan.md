@@ -9,7 +9,7 @@ Endpoints (backend)
 Placement (new frontend)
 - Public: `/login`, `/register`
 - After login:
-  - Restaurant users → `/dashboard` (wishlist, recent orders) with CTA to order on Tue/Fri
+  - Restaurant users → `/dashboard` (wishlist, recent orders) with CTA to order on Mon/Thu
   - Staff/admin → `/admin/dashboard` (KPIs, queues)
 
 Usage rules

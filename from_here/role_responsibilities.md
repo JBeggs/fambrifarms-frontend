@@ -36,7 +36,7 @@ This document describes what each role does to keep the system running smoothly 
 
 - Restaurant Users (Customers: chef, manager, owner)
   - Browsing: view products, stock status, pricing
-  - Wishlist: build and maintain wishlist; prepare orders on allowed days (Tue/Fri)
+  - Wishlist: build and maintain wishlist; prepare orders on allowed days (Mon/Thu)
   - Orders: place orders; monitor status; receive goods and report discrepancies
   - Finance: review invoices; raise disputes/returns promptly
   - Maintenance: keep restaurant account contacts current; align order timing with delivery windows

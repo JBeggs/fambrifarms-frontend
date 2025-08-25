@@ -51,7 +51,7 @@ export default function OnePageOverview() {
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-1">Place Order (Tuesdays & Fridays)</h3>
+              <h3 className="font-semibold text-gray-900 mb-1">Place Order (Mondays & Thursdays)</h3>
               <p className="text-gray-600">On order days, restaurants convert their wishlist to an actual order</p>
             </div>
           </div>

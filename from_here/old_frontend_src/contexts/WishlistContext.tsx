@@ -45,10 +45,10 @@ export const WishlistProvider = ({ children }: { children: React.ReactNode }) =>
   };
 
   const checkOrderDay = async () => {
-    // Local rule: Orders can be placed on Tuesdays (2) and Fridays (5)
+    // Local rule: Orders can be placed on Mondays (1) and Thursdays (4)
     const today = new Date();
     const dayOfWeek = today.getDay();
-    setIsOrderDay(dayOfWeek === 2 || dayOfWeek === 5);
+    setIsOrderDay(dayOfWeek === 1 || dayOfWeek === 4);
   };
 
   const addToWishlist = async (productId: number, quantity: number, notes?: string) => {

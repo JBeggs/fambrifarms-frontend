@@ -233,7 +233,7 @@ export default function RolesPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-indigo-600">•</span>
-                    <span className="text-indigo-800">Place orders on Tuesdays & Fridays</span>
+                    <span className="text-indigo-800">Place orders on Mondays & Thursdays</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-indigo-600">•</span>

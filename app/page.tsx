@@ -42,7 +42,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Restaurant Ordering</h3>
               <p className="text-gray-600">
-                Simple wishlist system where restaurants order on Tuesdays & Fridays. 
+                Simple wishlist system where restaurants order on Mondays & Thursdays. 
                 Smart supplier selection and in-house production decisions.
               </p>
             </div>

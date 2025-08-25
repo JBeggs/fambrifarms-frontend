@@ -72,9 +72,9 @@ export default function WishlistPage() {
     
     // Calculate next order day
     let daysUntil = 0;
-    if (dayOfWeek < 2) daysUntil = 2 - dayOfWeek; // Next Tuesday
-    else if (dayOfWeek < 5) daysUntil = 5 - dayOfWeek; // Next Friday
-    else daysUntil = 7 - dayOfWeek + 2; // Next Tuesday
+    if (dayOfWeek < 1) daysUntil = 1 - dayOfWeek; // Next Monday
+    else if (dayOfWeek < 4) daysUntil = 4 - dayOfWeek; // Next Thursday
+    else daysUntil = 7 - dayOfWeek + 1; // Next Monday
     
     const nextOrderDate = new Date(today);
     nextOrderDate.setDate(today.getDate() + daysUntil);
@@ -336,7 +336,7 @@ export default function WishlistPage() {
                   </button>
                 ) : (
                   <div className="flex-1 bg-gray-300 text-gray-500 py-3 px-4 rounded-lg text-center font-medium cursor-not-allowed">
-                    Order on Tue/Fri Only
+                    Order on Mon/Thu Only
                   </div>
                 )}
               </div>
@@ -353,7 +353,7 @@ export default function WishlistPage() {
                 <p className="text-gray-600 text-sm">
                   Learn about our Sun City delivery areas, schedules, and coverage zones.
                   {wishlist?.items && wishlist.items.length > 0 && (
-                    <span className="font-medium text-green-600"> Your order will be delivered on Tue/Fri!</span>
+                    <span className="font-medium text-green-600"> Your order will be delivered on Mon/Thu!</span>
                   )}
                 </p>
               </div>

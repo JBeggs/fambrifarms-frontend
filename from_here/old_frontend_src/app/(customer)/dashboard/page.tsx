@@ -30,22 +30,22 @@ export default function DashboardPage() {
 
   const today = new Date();
   const dayOfWeek = today.getDay();
-  const isTuesday = dayOfWeek === 2;
-  const isFriday = dayOfWeek === 5;
-  const isOrderDay = isTuesday || isFriday;
+  const isMonday = dayOfWeek === 1;
+  const isThursday = dayOfWeek === 4;
+  const isOrderDay = isMonday || isThursday;
 
   const getNextOrderDay = () => {
     const today = new Date();
     const currentDay = today.getDay();
     
-    if (currentDay === 2) return 'Today (Tuesday)';
-    if (currentDay === 5) return 'Today (Friday)';
+    if (currentDay === 1) return 'Today (Monday)';
+    if (currentDay === 4) return 'Today (Thursday)';
     
-    // Calculate next Tuesday or Friday
+    // Calculate next Monday or Thursday
     let daysUntilNext = 0;
-    if (currentDay < 2) daysUntilNext = 2 - currentDay;
-    else if (currentDay < 5) daysUntilNext = 5 - currentDay;
-    else daysUntilNext = 7 - currentDay + 2; // Next Tuesday
+    if (currentDay < 1) daysUntilNext = 1 - currentDay;
+    else if (currentDay < 4) daysUntilNext = 4 - currentDay;
+    else daysUntilNext = 7 - currentDay + 1; // Next Monday
     
     const nextOrderDate = new Date(today);
     nextOrderDate.setDate(today.getDate() + daysUntilNext);
@@ -175,7 +175,7 @@ export default function DashboardPage() {
                     Order Schedule
                   </dt>
                   <dd className="text-lg font-medium text-gray-900">
-                    Tuesdays & Fridays
+                    Mondays & Thursdays
                   </dd>
                 </dl>
               </div>

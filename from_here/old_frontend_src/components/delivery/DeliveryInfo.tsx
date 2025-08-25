@@ -8,13 +8,13 @@ interface DeliveryInfoProps {
 
 export default function DeliveryInfo({ className = '' }: DeliveryInfoProps) {
   const deliverySchedule = [
-    { day: 'Monday', status: 'Order Prep', description: 'Preparing for Tuesday orders' },
-    { day: 'Tuesday', status: 'Order Day', description: 'Place orders today', isOrderDay: true },
-    { day: 'Wednesday', status: 'Delivery Day', description: 'Delivering Tuesday orders', isDelivery: true },
-    { day: 'Thursday', status: 'Delivery Day', description: 'Delivering Tuesday orders', isDelivery: true },
-    { day: 'Friday', status: 'Order Day', description: 'Place orders today', isOrderDay: true },
-    { day: 'Saturday', status: 'Delivery Day', description: 'Delivering Friday orders', isDelivery: true },
-    { day: 'Sunday', status: 'Delivery Day', description: 'Delivering Friday orders', isDelivery: true },
+    { day: 'Monday', status: 'Order Day', description: 'Place orders today', isOrderDay: true },
+    { day: 'Tuesday', status: 'Delivery Day', description: 'Delivering Monday orders', isDelivery: true },
+    { day: 'Wednesday', status: 'Delivery Day', description: 'Delivering Monday orders', isDelivery: true },
+    { day: 'Thursday', status: 'Order Day', description: 'Place orders today', isOrderDay: true },
+    { day: 'Friday', status: 'Delivery Day', description: 'Delivering Thursday orders', isDelivery: true },
+    { day: 'Saturday', status: 'Delivery Day', description: 'Delivering Thursday orders', isDelivery: true },
+    { day: 'Sunday', status: 'Delivery Day', description: 'No deliveries', isDelivery: true },
   ];
 
   const today = new Date();
@@ -27,7 +27,7 @@ export default function DeliveryInfo({ className = '' }: DeliveryInfoProps) {
           🚚 Sun City Delivery Service
         </h3>
         <p className="text-gray-700">
-          Fresh produce delivered to restaurants across Sun City Resort and surrounding areas. Orders placed on Tuesday/Friday are delivered the following days.
+          Fresh produce delivered to restaurants across Sun City Resort and surrounding areas. Orders placed on Monday/Thursday are delivered the following days.
         </p>
       </div>
 
@@ -124,7 +124,7 @@ export default function DeliveryInfo({ className = '' }: DeliveryInfoProps) {
         <div className="text-center p-3 bg-white rounded border border-gray-200">
           <div className="text-lg font-bold text-green-600">5x</div>
           <div className="text-xs text-gray-600">Weekly Deliveries</div>
-          <div className="text-xs text-gray-500">Wed-Sun</div>
+          <div className="text-xs text-gray-500">Tue/Wed & Fri/Sat</div>
         </div>
         <div className="text-center p-3 bg-white rounded border border-gray-200">
           <div className="text-lg font-bold text-purple-600">15km</div>

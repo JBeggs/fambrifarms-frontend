@@ -22,7 +22,7 @@ export default function GlossaryPage() {
           </div>
           <p className="text-gray-600">
             A shopping list you can edit before placing your order. Add items throughout the week, 
-            adjust quantities, then convert to an actual order on Tuesdays or Fridays.
+            adjust quantities, then convert to an actual order on Mondays or Thursdays.
           </p>
         </div>
 
@@ -210,7 +210,7 @@ export default function GlossaryPage() {
         <div className="max-w-3xl mx-auto text-gray-600 space-y-4">
           <p>
             <strong>Restaurant flow:</strong> Restaurants build a <em>wishlist</em> during the week, 
-            then convert it to an <em>order</em> on Tuesdays or Fridays. The system creates 
+            then convert it to an <em>order</em> on Mondays or Thursdays. The system creates 
             <em>reservations</em> for available stock and <em>purchase orders</em> to <em>suppliers</em> 
             for items that need to be bought.
           </p>
