@@ -7,7 +7,7 @@ Multi-role staff: a staff member can hold multiple roles simultaneously (e.g., C
 - **Stocktaker (Inventory Controller)**: manage stock counts, record stock movements (in/out/adjustment), reconcile variances, batch expiries, mark production batches complete.
 - **Production Lead**: manage recipes, start/complete production batches; monitor yields; flag shortages.
 - **Sales/Ops**: manage customer accounts, verify restaurants, assist with orders, issue credits/returns.
-- **Restaurant Users (Customer)**: browse products, maintain wishlist, place orders on allowed days (Mon/Thu), view order history and invoices. A restaurant can have multiple users (chef, manager) under the same account.
+- **Restaurant Users (Customer)**: browse products, maintain wishlist, place orders on allowed days (Tue/Fri), view order history and invoices. A restaurant can have multiple users (chef, manager) under the same account.
 
 Access policy highlights
 - Staff log in with staff/admin accounts; customers with restaurant accounts.

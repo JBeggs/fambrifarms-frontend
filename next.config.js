@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://famdridevops.pythonanywhere.com/api/:path*',
+        destination: 'https://fambridevops.pythonanywhere.com/api/:path*',
       },
     ];
   },
